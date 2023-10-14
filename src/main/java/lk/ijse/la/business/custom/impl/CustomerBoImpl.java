@@ -1,7 +1,8 @@
 package lk.ijse.la.business.custom.impl;
 
 import lk.ijse.la.business.custom.CustomerBo;
-import lk.ijse.la.dao.CustomerDao;
+import lk.ijse.la.dao.custom.CustomerDao;
+import lk.ijse.la.dao.custom.impl.CustomerDaoImpl;
 import lk.ijse.la.dto.CustomerDto;
 import lk.ijse.la.entity.Customer;
 
@@ -15,7 +16,7 @@ public class CustomerBoImpl implements CustomerBo {
 
         var customer = new Customer(id, name, address, tel);
 
-        CustomerDao customerDao = new CustomerDao();
+        CustomerDao customerDao = new CustomerDaoImpl();
         boolean isSaved = customerDao.save(customer);
 
         return isSaved;
