@@ -4,7 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import lk.ijse.la.business.BoFactory;
+import lk.ijse.la.business.BoType;
 import lk.ijse.la.business.custom.CustomerBo;
+import lk.ijse.la.business.custom.ItemBo;
 import lk.ijse.la.business.custom.impl.CustomerBoImpl;
 import lk.ijse.la.dto.CustomerDto;
 
@@ -29,7 +32,7 @@ public class CustomerFormController {
 
         var dto = new CustomerDto(id, name, address, tel);
 
-        CustomerBo bo = new CustomerBoImpl();
+        CustomerBo bo = BoFactory.getBo(BoType.CUSTOMER);
         try {
             boolean isSaved = bo.saveCustomer(dto);
             if(isSaved) {
