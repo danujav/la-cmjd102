@@ -19,11 +19,6 @@ public class CustomerFormController {
     @FXML
     private TextField txtTel;
 
-    @FXML
-    void i(ActionEvent event) {
-
-    }
-
     public void btnSaveOnAction(ActionEvent actionEvent) {
         String id = txtId.getText();
         String name = txtName.getText();
