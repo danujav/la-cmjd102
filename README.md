@@ -1,1 +1,1 @@
-![](src/main/resources/img/la.png)
+![](la-jdbc/src/main/resources/img/la.png)
