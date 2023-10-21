@@ -5,4 +5,6 @@ import lk.ijse.hibernate.dto.CustomerDto;
 
 public interface CustomerBo extends SuperBo {
     void saveCustomer(CustomerDto dto) ;
+
+    CustomerDto searchCustomer(String id);
 }

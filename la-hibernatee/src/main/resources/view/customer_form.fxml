@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.CustomerFormController">
    <children>
       <Label layoutX="209.0" layoutY="31.0" text="Customer Form">
@@ -15,7 +14,7 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <TextField fx:id="txtId" layoutX="57.0" layoutY="105.0" prefHeight="36.0" prefWidth="224.0" />
+      <TextField fx:id="txtId" layoutX="57.0" layoutY="105.0" onAction="#txtIdOnAction" prefHeight="36.0" prefWidth="224.0" />
       <TextField fx:id="txtName" layoutX="325.0" layoutY="105.0" prefHeight="36.0" prefWidth="224.0" />
       <TextField fx:id="txtAddress" layoutX="55.0" layoutY="193.0" prefHeight="36.0" prefWidth="224.0" />
       <TextField fx:id="txtTel" layoutX="323.0" layoutY="193.0" prefHeight="36.0" prefWidth="224.0" />

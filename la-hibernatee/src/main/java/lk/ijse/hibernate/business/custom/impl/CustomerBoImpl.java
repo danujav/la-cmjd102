@@ -22,4 +22,16 @@ public class CustomerBoImpl implements CustomerBo {
 
         dao.save(customer);
     }
+
+    @Override
+    public CustomerDto searchCustomer(String id) {
+        Customer customer = dao.search(id);
+
+        return new CustomerDto(
+                customer.getId(),
+                customer.getName(),
+                customer.getAddress(),
+                customer.getTel()
+        );
+    }
 }

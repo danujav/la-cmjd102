@@ -38,4 +38,17 @@ public class CustomerFormController {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
     }
+
+
+    @FXML
+    void txtIdOnAction(ActionEvent event) {
+        String id = txtId.getText();
+
+        CustomerDto dto = bo.searchCustomer(id);
+        if(dto != null) {
+            txtName.setText(dto.getName());
+            txtAddress.setText(dto.getAddress());
+            txtTel.setText(dto.getTel());
+        }
+    }
 }

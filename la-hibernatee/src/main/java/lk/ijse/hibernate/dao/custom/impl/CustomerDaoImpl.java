@@ -6,6 +6,8 @@ import lk.ijse.hibernate.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.util.List;
+
 public class CustomerDaoImpl implements CustomerDao {
 
     @Override
@@ -16,5 +18,32 @@ public class CustomerDaoImpl implements CustomerDao {
         session.persist(customer);
 
         transaction.commit();
+    }
+
+    @Override
+    public Customer search(String id) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+
+        Customer customer = session.get(Customer.class, id);
+
+        transaction.commit();
+
+        return customer;
+    }
+
+    @Override
+    public boolean delete(String id) {
+        return false;
+    }
+
+    @Override
+    public List<Customer> getAll() {
+        return null;
+    }
+
+    @Override
+    public boolean update(Customer customer) {
+        return false;
     }
 }
