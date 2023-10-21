@@ -4,10 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
-import lk.ijse.jdbc.business.BoFactory;
-import lk.ijse.jdbc.business.BoType;
-import lk.ijse.jdbc.business.custom.CustomerBo;
-import lk.ijse.jdbc.dto.CustomerDto;
+import lk.ijse.hibernate.business.BoFactory;
+import lk.ijse.hibernate.business.BoType;
+import lk.ijse.hibernate.business.custom.CustomerBo;
+import lk.ijse.hibernate.dto.CustomerDto;
 
 public class CustomerFormController {
     @FXML
